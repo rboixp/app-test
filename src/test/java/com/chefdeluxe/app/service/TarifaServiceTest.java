@@ -19,9 +19,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-
-import com.chefdeluxe.app.entidades.Reserva;
-import com.chefdeluxe.app.entidades.Rol;
 import com.chefdeluxe.app.entidades.Tarifa;
 import com.chefdeluxe.app.repositorio.TarifaRepositorio;
 
@@ -74,8 +71,8 @@ public class TarifaServiceTest {
 	}
 	@Test
 	public void findAll() {
-		when(tarifaRepositorio.findAll(pageable)).thenReturn(pageT);
-		Assertions.assertNotNull(tarifaService.findAll(1,1));
+		when(tarifaRepositorio.findAll()).thenReturn(tarifaList);
+		Assertions.assertNotNull(tarifaService.findAll());
 	}
 	@Test
 	public void update() {
