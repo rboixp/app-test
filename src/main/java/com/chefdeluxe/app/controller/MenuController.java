@@ -106,7 +106,6 @@ public class MenuController {
 		}
 
 		Menu menu = new Menu();
-
 		menu.setIdChef(user.getId());
 		menu.setEntrante(menuDTO.getEntrante());
 		menu.setPrimero(menuDTO.getPrimero());
