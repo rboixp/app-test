@@ -256,7 +256,7 @@ public class MenuController {
 		menu.setCafes(menuDTO.getCafes());
 		menuService.save(menu);
 
-		return new ResponseEntity<>("Menu actualizado ", HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>("Menu actualizado ", HttpStatus.OK);
 
 	}
 
