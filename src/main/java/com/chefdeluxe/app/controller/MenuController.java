@@ -106,6 +106,7 @@ public class MenuController {
 		}
 
 		Menu menu = new Menu();
+
 		menu.setIdChef(user.getId());
 		menu.setEntrante(menuDTO.getEntrante());
 		menu.setPrimero(menuDTO.getPrimero());
@@ -256,7 +257,7 @@ public class MenuController {
 		menu.setCafes(menuDTO.getCafes());
 		menuService.save(menu);
 
-		return new ResponseEntity<>("Menu actualizado ", HttpStatus.OK);
+		return new ResponseEntity<>("Menu actualizado ", HttpStatus.BAD_REQUEST);
 
 	}
 
